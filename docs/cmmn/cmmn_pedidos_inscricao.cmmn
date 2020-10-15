@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmmn:definitions xmlns:dc="http://www.omg.org/spec/CMMN/20151109/DC" xmlns:cmmndi="http://www.omg.org/spec/CMMN/20151109/CMMNDI" xmlns:cmmn="http://www.omg.org/spec/CMMN/20151109/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/CMMN/20151109/DI" id="Definitions_1hzcjvn" targetNamespace="http://bpmn.io/schema/cmmn" exporter="Camunda Modeler" exporterVersion="4.2.0">
+  <cmmn:case id="Case_0jiy0gt" name="Fazer pedidos">
+    <cmmn:casePlanModel id="CasePlanModel_0l03i0t" name="Fazer pedidos">
+      <cmmn:planItem id="PlanItem_0qka5e1" definitionRef="UserEventListener_0hm9f27" />
+      <cmmn:sentry id="Sentry_1qr5nm7">
+        <cmmn:planItemOnPart id="PlanItemOnPart_1dj20y9" sourceRef="PlanItem_0qka5e1">
+          <cmmn:standardEvent>occur</cmmn:standardEvent>
+        </cmmn:planItemOnPart>
+      </cmmn:sentry>
+      <cmmn:planningTable id="PlanningTable_139n01r">
+        <cmmn:discretionaryItem id="PlanItem_1" definitionRef="HumanTask_1138ld0" />
+        <cmmn:discretionaryItem id="PlanItem_1hxqjo1" definitionRef="HumanTask_0kyv0c8" />
+        <cmmn:discretionaryItem id="PlanItem_0m7yzg5" definitionRef="HumanTask_0tthpiy" />
+        <cmmn:discretionaryItem id="PlanItem_0umj3jf" definitionRef="HumanTask_08map5u" />
+        <cmmn:discretionaryItem id="PlanItem_1gd0jou" definitionRef="HumanTask_1lgnqjr" />
+      </cmmn:planningTable>
+      <cmmn:userEventListener id="UserEventListener_0hm9f27" name="Finalizar alterações" />
+      <cmmn:humanTask id="HumanTask_1138ld0" name="Adicionar disciplina" />
+      <cmmn:humanTask id="HumanTask_0kyv0c8" name="Remover disciplina" />
+      <cmmn:humanTask id="HumanTask_0tthpiy" name="Trancar disciplina" />
+      <cmmn:humanTask id="HumanTask_08map5u" name="Transferir disciplina" />
+      <cmmn:humanTask id="HumanTask_1lgnqjr" name="Destrancar disciplina" />
+      <cmmn:exitCriterion id="ExitCriterion_02z3rxo" sentryRef="Sentry_1qr5nm7" />
+    </cmmn:casePlanModel>
+  </cmmn:case>
+  <cmmndi:CMMNDI>
+    <cmmndi:CMMNDiagram id="CMMNDiagram_021gkjq" name="Fazer pedidos">
+      <cmmndi:Size width="500" height="500" />
+      <cmmndi:CMMNShape id="DI_CasePlanModel_0l03i0t" cmmnElementRef="CasePlanModel_0l03i0t">
+        <dc:Bounds x="154" y="99" width="457" height="286" />
+        <cmmndi:CMMNLabel />
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape id="PlanItem_0cp3iu5_di" cmmnElementRef="PlanItem_0qka5e1">
+        <dc:Bounds x="509" y="295" width="36" height="36" />
+        <cmmndi:CMMNLabel>
+          <dc:Bounds x="501" y="331" width="51" height="25" />
+        </cmmndi:CMMNLabel>
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape id="ExitCriterion_02z3rxo_di" cmmnElementRef="ExitCriterion_02z3rxo">
+        <dc:Bounds x="601" y="299" width="20" height="28" />
+        <cmmndi:CMMNLabel />
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNEdge id="PlanItemOnPart_1dj20y9_di" cmmnElementRef="PlanItemOnPart_1dj20y9" targetCMMNElementRef="ExitCriterion_02z3rxo" isStandardEventVisible="true">
+        <di:waypoint x="545" y="313" />
+        <di:waypoint x="573" y="313" />
+        <di:waypoint x="573" y="313" />
+        <di:waypoint x="601" y="313" />
+        <cmmndi:CMMNLabel>
+          <dc:Bounds x="556" y="287" width="34" height="13" />
+        </cmmndi:CMMNLabel>
+      </cmmndi:CMMNEdge>
+      <cmmndi:CMMNShape id="DiscretionaryItem_0boic7y_di" cmmnElementRef="PlanItem_1">
+        <dc:Bounds x="190" y="132" width="100" height="80" />
+        <cmmndi:CMMNLabel />
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape id="DiscretionaryItem_0zh0e4w_di" cmmnElementRef="PlanItem_1hxqjo1">
+        <dc:Bounds x="333" y="132" width="100" height="80" />
+        <cmmndi:CMMNLabel />
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape id="DiscretionaryItem_1o9zuo3_di" cmmnElementRef="PlanItem_0m7yzg5">
+        <dc:Bounds x="190" y="273" width="100" height="80" />
+        <cmmndi:CMMNLabel />
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape id="DiscretionaryItem_1xiwn3n_di" cmmnElementRef="PlanItem_0umj3jf">
+        <dc:Bounds x="477" y="132" width="100" height="80" />
+        <cmmndi:CMMNLabel />
+      </cmmndi:CMMNShape>
+      <cmmndi:CMMNShape id="DiscretionaryItem_0oq355q_di" cmmnElementRef="PlanItem_1gd0jou">
+        <dc:Bounds x="333" y="273" width="100" height="80" />
+        <cmmndi:CMMNLabel />
+      </cmmndi:CMMNShape>
+    </cmmndi:CMMNDiagram>
+  </cmmndi:CMMNDI>
+</cmmn:definitions>
