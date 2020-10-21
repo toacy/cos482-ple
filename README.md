@@ -1,2 +1,7 @@
 # cos842-ple
-Sistema Acadêmico
+
+
+<p align="center">
+    <img src="./images/logo.png">
+</p>
+
