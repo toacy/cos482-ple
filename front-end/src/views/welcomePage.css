@@ -1,0 +1,16 @@
+.welcome-page-container {
+  padding: 30px;
+  color: #fff;
+}
+
+.menu-option {
+  font-size: 20px;
+  width: 300px;
+  text-align: center;
+  margin: 1em;
+  background-color: #fff;
+  color: #292a35;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px;
+}
