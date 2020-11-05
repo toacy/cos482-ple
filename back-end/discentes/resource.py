@@ -40,8 +40,8 @@ def buscar_dados_discente(id_discente):
     }
 
 
-def cadastrar_discente(id, nome, sobrenome, email, dia_nascimento, mes_nascimento, ano_nascimento, curso):
-    u = Discente(id, nome, sobrenome, email, dia_nascimento, mes_nascimento, ano_nascimento, curso)
+def cadastrar_discente(id, nome, sobrenome, email, senha, dia_nascimento, mes_nascimento, ano_nascimento, curso):
+    u = Discente(id, nome, sobrenome, email, senha, dia_nascimento, mes_nascimento, ano_nascimento, curso)
     db_session.add(u)
     db_session.commit()
     return "Aluno cadastrado com sucesso"
