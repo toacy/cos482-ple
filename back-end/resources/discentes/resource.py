@@ -1,6 +1,8 @@
 from flask import jsonify, request
 from repository.db import db_session
-from discentes.model import Discente
+from resources.discentes.model import Discente
+from services.camunda_service import CamundaService
+from config import TestConfig
 
 
 def lista_discentes():
@@ -56,11 +58,20 @@ def alterar_dados_discente(id_discente):
 
     params = request.args
 
+    camunda_handler = CamundaService("alterar_dados_usuario", config=TestConfig)
+    process_data = camunda_handler.start_process()
+
+    camunda_handler.claim_task(process_data["processInstanceId"])
+    camunda_handler.complete_task(process_data["processInstanceId"])
+
     discente = Discente.query.get(id_discente)
 
     for param in params:
         setattr(discente, param, params[param])
         db_session.commit()
+
+    camunda_handler.claim_task(process_data["processInstanceId"])
+    camunda_handler.complete_task(process_data["processInstanceId"])
 
     return {
         "id": discente.id,

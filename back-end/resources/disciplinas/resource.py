@@ -1,7 +1,7 @@
 from flask import jsonify, request
 from repository.db import db_session
-from disciplinas.model import Disciplina
-from discentes.model import Discente
+from resources.disciplinas.model import Disciplina
+from resources.discentes.model import Discente
 
 
 def lista_disciplinas():

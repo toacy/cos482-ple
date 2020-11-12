@@ -34,5 +34,5 @@ Base.query = db_session.query_property()
 
 
 def init_db(config):
-    import discentes.model
+    import resources.discentes.model
     Base.metadata.create_all(bind=engine)

@@ -1,5 +1,5 @@
-from sqlalchemy import Column, Integer, String
 from repository.db import Base
+from sqlalchemy import Column, Integer, String
 
 
 class Discente(Base):

@@ -1,6 +1,6 @@
 from flask import jsonify, request
 from repository.db import db_session
-from discentes.model import Discente
+from resources.discentes.model import Discente
 
 
 def lista_discentes():

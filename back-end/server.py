@@ -3,10 +3,10 @@ from flask import Flask
 from flask_cors import CORS
 import os
 from config import ProductionConfig, TestConfig
-from health_check.resource import health_check
-from discentes.resource import lista_discentes, cadastrar_discente, alterar_dados_discente, buscar_dados_discente
-from disciplinas.resource import lista_disciplinas, detalha_disciplina, inscrever_discente, trancar_inscricao_discente
-from session.resource import login
+from resources.health_check.resource import health_check
+from resources.discentes.resource import lista_discentes, cadastrar_discente, alterar_dados_discente, buscar_dados_discente
+from resources.disciplinas.resource import lista_disciplinas, detalha_disciplina, inscrever_discente, trancar_inscricao_discente
+from resources.session.resource import login
 from repository.db import init_db
 from scripts.populate_database import popular_discentes, popular_disciplinas
 
@@ -37,4 +37,4 @@ def create_app(config_obj):
 app = create_app(TestConfig)
 
 if __name__ == '__main__':
-    app.run('0.0.0.0', 8080)
+    app.run('0.0.0.0', 5000)

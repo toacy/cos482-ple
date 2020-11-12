@@ -4,6 +4,10 @@ from os import getenv
 class TestConfig:
     DATABASE_URI = 'sqlite:///test_database.sqlite'
     TESTING = True
+    CAMUNDA_SERVER = 'http://localhost:8080/engine-rest'
+    CAMUNDA_USER = 'sistema'
+    TEST_USER = 'teste@teste'
+    TEST_PASS = 'cos482'
 
 
 class ProductionConfig:

@@ -1,6 +1,6 @@
 from repository.db import init_db
-from discentes.resource import cadastrar_discente
-from disciplinas.resource import cadastrar_disciplina
+from resources.discentes.resource import cadastrar_discente
+from resources.disciplinas.resource import cadastrar_disciplina
 from config import TestConfig
 
 
@@ -9,6 +9,8 @@ def popular_discentes():
                        "cos482", 20, 9, 1996, "Eng. Computação e Informação", 1)
     cadastrar_discente(2, "Lucas", "Chagas", "lucaschagas@poli.ufrj.br",
                        "cos482", 20, 9, 1996, "Eng. Computação e Informação", 1)
+    cadastrar_discente(3, "Usuário", "Teste", "teste@teste",
+                       "cos482", 1, 1, 1990, "-", 1)
 
 
 def popular_disciplinas():
